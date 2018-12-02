@@ -393,11 +393,16 @@ public class Controller {
             }
         });
     }
+
+    public Boolean validacija(){
+        return validirajImePrezime(imeTextField.textProperty().get()) && validirajImePrezime(prezimeTextField.textProperty().get())
+                && validirajDatum(datumDatePicker.valueProperty().getValue()) && validirajIndex(brojIndexaTextField.textProperty().get())
+                && validirajJMBG(jmbgTextField.textProperty().get()) && validirajMail(emailAdresaTextField.textProperty().get())
+                && validirajTelefon(kontaktTelefonTextField.textProperty().get());
+    }
+
     public void potvrdiButtonClicked(){
-        if(validirajImePrezime(imeTextField.textProperty().get()) && validirajImePrezime(prezimeTextField.textProperty().get())
-            && validirajDatum(datumDatePicker.valueProperty().getValue()) && validirajIndex(brojIndexaTextField.textProperty().get())
-            && validirajJMBG(jmbgTextField.textProperty().get()) && validirajMail(emailAdresaTextField.textProperty().get())
-            && validirajTelefon(kontaktTelefonTextField.textProperty().get())) System.out.println(ispisiPodatke());
+        if(validacija()) System.out.println(ispisiPodatke());
         else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Potvrda forme");
