@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.CheckBox?>
@@ -91,8 +93,23 @@
                  <Label text="Datum rodjenja:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                  <Label text="Mjesto rodjenja:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
                  <TextField fx:id="jmbgTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                 <DatePicker fx:id="datumTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                 <TextField fx:id="placeTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                 <DatePicker fx:id="datumDatePicker" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                 <ChoiceBox fx:id="mjestoChoiceBox" prefHeight="25.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <items>
+                         <FXCollections fx:factory="observableArrayList">
+                             <String fx:value="Banja Luka" />
+                             <String fx:value="Bihać" />
+                             <String fx:value="Doboj" />
+                             <String fx:value="Gorazde" />
+                             <String fx:value="Livno" />
+                             <String fx:value="Mostar" />
+                             <String fx:value="Prijedor" />
+                             <String fx:value="Sarajevo" />
+                             <String fx:value="Tuzla" />
+                             <String fx:value="Zenica" />
+                         </FXCollections>
+                     </items>
+                 </ChoiceBox>
              </children>
          </GridPane>
       </children>
@@ -175,7 +192,7 @@
       <GridPane.margin>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </GridPane.margin></Group>
-
+    <Label fx:id="messageLabel" text="" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
    <columnConstraints>
       <ColumnConstraints hgrow="ALWAYS" maxWidth="288.0" minWidth="213.0" prefWidth="286.0" />
       <ColumnConstraints hgrow="ALWAYS" maxWidth="330.0" minWidth="224.0" prefWidth="314.0" />
@@ -184,6 +201,7 @@
       <RowConstraints maxHeight="155.0" minHeight="148.0" prefHeight="153.0" vgrow="ALWAYS" />
       <RowConstraints maxHeight="135.0" minHeight="97.0" prefHeight="135.0" vgrow="ALWAYS" />
       <RowConstraints maxHeight="218.0" minHeight="186.0" prefHeight="186.0" vgrow="ALWAYS" />
+       <RowConstraints prefHeight="20" vgrow="SOMETIMES"/>
    </rowConstraints>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
