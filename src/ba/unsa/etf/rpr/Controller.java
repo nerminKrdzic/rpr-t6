@@ -1,20 +1,11 @@
 package ba.unsa.etf.rpr;
-
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.InputMethodEvent;
-import javafx.scene.layout.BackgroundFill;
-import javafx.util.StringConverter;
-
-import java.awt.*;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Collections;
 
 public class Controller {
     //osnovni podaci
@@ -47,13 +38,24 @@ public class Controller {
     @FXML
     private ChoiceBox<String> godinaStudijaChoiceBox;
     @FXML
-    private ChoiceBox<String> CiklusStudijaChoiceBox;
+    private ChoiceBox<String> ciklusStudijaChoiceBox;
     @FXML
     private RadioButton redovanRadioButton;
     @FXML
     private RadioButton samofinansirajuciRadioButton;
     @FXML
     private CheckBox borackaKategorijaCheckBox;
+
+    public String ispisiPodatke(){
+        String ispis = "Ime: " + imeTextField.textProperty().get() + " Prezime: " + prezimeTextField.textProperty().get() + " Broj indexa: " + brojIndexaTextField.textProperty().get() + "\n";
+        ispis += "JMBG: " + jmbgTextField.textProperty().get() + " Datum rodjenja: " + datumDatePicker.getValue().toString() + " Mjesto: " + mjestoChoiceBox.getValue() + "\n";
+        ispis += "Kontakt adresa: " + kontaktAdresaTextField.textProperty().get() + " Kontakt telefon: " + kontaktTelefonTextField.textProperty().get() + " E-mail: " + emailAdresaTextField.textProperty().get() + "\n";
+        ispis += "Odsjek: " + odsjekChoiceBox.getValue() + " Godina studija: " + godinaStudijaChoiceBox.getValue() + " Ciklus studija: " + ciklusStudijaChoiceBox.getValue();
+        if(redovanRadioButton.selectedProperty().get()) ispis += " Redovan student ";
+        else ispis += " Samofinansirajuci student\n";
+        if(borackaKategorijaCheckBox.selectedProperty().get()) ispis += "Pripada borackoj kategoriji\n";
+        return ispis;
+    }
 
     //message
     @FXML
@@ -66,32 +68,43 @@ public class Controller {
     private final Integer MUSKI = 000, ZENSKI = 999;
 
 
-    public Boolean validirajImePrezime(String string){
+    private Boolean validirajImePrezime(String string){
         string.trim();
-        if(string == null || string.length() > 20 || string.length() == 0 || string.contains(" ")) return false;
+        if(string == null || string.length() > 20 || string.length() == 0 || string.contains(" ")) {
+            return false;
+        }
+
         for(int i = 0; i < string.length(); i++){
             if(string.charAt(i) >= 'A' && string.charAt(i) <= 'Z' || string.charAt(i) >= 'a' && string.charAt(i) <= 'z') return true;
         }
         return false;
     }
 
-    public Boolean validirajMail(String mail) {
+    private Boolean validirajMail(String mail) {
+        if(mail == null){
+            return false;
+        }
         mail.trim();
         if(mail.endsWith("@hotmail.com") || mail.endsWith("@outlook.com")
                 || mail.endsWith("@gmail.com") || mail.endsWith("@etf.unsa.ba")) return true;
+
         return false;
     }
 
-    public Boolean validirajIndex(String index) {
-        if (index.length() == 0 || index.length() > 5) return false;
+    private Boolean validirajIndex(String index) {
+        if (index.length() == 0 || index.length() > 5) {
+            return false;
+        }
         for (int i = 0; i < index.length(); i++) {
             if (!Character.isDigit(index.charAt(i))) return false;
         }
         return true;
     }
 
-    public Boolean validirajJMBG(String jmbg){
-        if(jmbg == null || jmbg.length() != 13) return false;
+    private Boolean validirajJMBG(String jmbg){
+        if(jmbg == null || jmbg.length() != 13) {
+            return false;
+        }
         DD = jmbg.substring(0, 2);
         A = Integer.parseInt(DD.substring(0,1));
         B = Integer.parseInt(DD.substring(1,2));
@@ -116,7 +129,9 @@ public class Controller {
 
         K = jmbg.substring(12, 13);
         N = Integer.parseInt(K);
-        if(datum == null || datum.length() != 8) return false;
+        if(datum == null || datum.length() != 8) {
+            return false;
+        }
         if(datum.substring(0,2).equals(DD) && datum.substring(2,4).equals(MM) && datum.substring(5, 8).equals(GGG) // provjra maticnog s datumom
             && mjesto != null && mjesto.equals(RR)  // provjera maticnog s mjestom
             && (Integer.parseInt(BBB) >= MUSKI && Integer.parseInt(BBB) <=ZENSKI) // provjera maticnog s spolom
@@ -136,20 +151,21 @@ public class Controller {
         } else {
             jmbgTextField.getStyleClass().removeAll("poljeIspravno");
             jmbgTextField.getStyleClass().add("poljeNijeIspravno");
-            messageLabel.setText("Maticni broj se ne poklapa sa ostalim podacima!");
         }
 
     }
 
-    public Boolean validirajDatum(LocalDate date){
-        if(date == null) return false;
+    private Boolean validirajDatum(LocalDate date){
+        if(date == null) {
+            return false;
+        }
         if(date.getYear() < LocalDate.now().getYear() || (date.getYear() == LocalDate.now().getYear()
                 && date.getDayOfMonth() == LocalDate.now().getDayOfMonth() && date.getMonth() == LocalDate.now().getMonth()))
             return true;
         return false;
     }
 
-    public void postaviMjesto(String m){
+    private void postaviMjesto(String m){
         switch (m){
             case "Banja Luka":
                 mjesto = "10";
@@ -184,9 +200,26 @@ public class Controller {
         }
     }
 
+    private Boolean validirajTelefon(String telefon){
+        if(telefon == null || telefon.length() == 0) return true;
+        if(telefon.length() != 9 && telefon.length() != 10) {
+            return false;
+        }
+        for(int i = 0; i < telefon.length(); i++){
+            if(telefon.charAt(i) < '0' || telefon.charAt(i) > '9') {
+                return false;
+            }
+        }
+        return true;
+    }
+
     @FXML
     public void initialize(){
         mjestoChoiceBox.setValue("Sarajevo");
+        odsjekChoiceBox.setValue("RI");
+        godinaStudijaChoiceBox.setValue("Prva");
+        ciklusStudijaChoiceBox.setValue("Bachelor");
+        redovanRadioButton.selectedProperty().setValue(true);
 
         imeTextField.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -197,6 +230,18 @@ public class Controller {
                 } else{
                     imeTextField.getStyleClass().removeAll("poljeIspravno");
                     imeTextField.getStyleClass().add("poljeNijeIspravno");
+                }
+            }
+        });
+
+        imeTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(!newValue){
+                    if(validirajImePrezime(imeTextField.textProperty().get())){
+                        messageLabel.setText("");
+                    }
+                    else messageLabel.setText("Neispravno ime!");
                 }
             }
         });
@@ -214,6 +259,16 @@ public class Controller {
             }
         });
 
+        prezimeTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(!newValue){
+                    if(validirajImePrezime(prezimeTextField.textProperty().get())) messageLabel.setText("");
+                    else messageLabel.setText("Neispravno prezime!");
+                }
+            }
+        });
+
         emailAdresaTextField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -223,6 +278,16 @@ public class Controller {
                 } else{
                     emailAdresaTextField.getStyleClass().removeAll("poljeIspravno");
                     emailAdresaTextField.getStyleClass().add("poljeNijeIspravno");
+                }
+            }
+        });
+
+        emailAdresaTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(!newValue){
+                    if(validirajMail(emailAdresaTextField.textProperty().get())) messageLabel.setText("");
+                    else messageLabel.setText("Neispravan mail!");
                 }
             }
         });
@@ -240,38 +305,107 @@ public class Controller {
             }
         });
 
+        brojIndexaTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(!newValue){
+                    if(validirajIndex(brojIndexaTextField.textProperty().get())) messageLabel.setText("");
+                    else messageLabel.setText("Neispravan broj Indexa!");
+                }
+            }
+        });
+
         jmbgTextField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                messageLabel.setText("");
                 validirajMaticni(newValue);
+            }
+        });
+
+        jmbgTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(!newValue){
+                    if(validirajJMBG(jmbgTextField.textProperty().get())) messageLabel.setText("");
+                    else messageLabel.setText("Maticni broj se ne poklapa sa ostalim zavisnim podacima!");
+                }
             }
         });
 
         datumDatePicker.valueProperty().addListener(new ChangeListener<LocalDate>() {
             @Override
             public void changed(ObservableValue<? extends LocalDate> observable, LocalDate oldValue, LocalDate newValue) {
-                messageLabel.setText("");
                 if(newValue != null){
                     String d = newValue.toString();
                     datum = d.substring(8, 10) + d.substring(5,7) + d.substring(0,4);
                 }
-                if(!validirajDatum(newValue)){
-                    messageLabel.setText("Datum nije ispravan!");
+                if(validirajDatum(newValue)){
+                    validirajMaticni(jmbgTextField.textProperty().getValue());
                 }
-                else validirajMaticni(jmbgTextField.textProperty().getValue());
+            }
+        });
+
+        datumDatePicker.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(!newValue){
+                    if(validirajDatum(datumDatePicker.valueProperty().get())) messageLabel.setText("");
+                    else messageLabel.setText("Neispravan datum!");
+                }
             }
         });
 
         mjestoChoiceBox.valueProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                messageLabel.setText("");
                postaviMjesto(newValue);
                validirajMaticni(jmbgTextField.textProperty().getValue());
             }
         });
 
+        kontaktAdresaTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                kontaktAdresaTextField.getStyleClass().add("poljeIspravno");
+            }
+        });
+
+        kontaktTelefonTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if(validirajTelefon(newValue)){
+                    kontaktTelefonTextField.getStyleClass().removeAll("poljeNijeIspravno");
+                    kontaktTelefonTextField.getStyleClass().add("poljeIspravno");
+                } else{
+                    kontaktTelefonTextField.getStyleClass().removeAll("poljeIspravno");
+                    kontaktTelefonTextField.getStyleClass().add("poljeNijeIspravno");
+                }
+            }
+        });
+
+        kontaktTelefonTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(!newValue){
+                    if(validirajTelefon(kontaktTelefonTextField.textProperty().get())) messageLabel.setText("");
+                    else messageLabel.setText("Neispravan telefonski broj!");
+                }
+            }
+        });
     }
+    public void potvrdiButtonClicked(){
+        if(validirajImePrezime(imeTextField.textProperty().get()) && validirajImePrezime(prezimeTextField.textProperty().get())
+            && validirajDatum(datumDatePicker.valueProperty().getValue()) && validirajIndex(brojIndexaTextField.textProperty().get())
+            && validirajJMBG(jmbgTextField.textProperty().get()) && validirajMail(emailAdresaTextField.textProperty().get())
+            && validirajTelefon(kontaktTelefonTextField.textProperty().get())) System.out.println(ispisiPodatke());
+        else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Potvrda forme");
+            alert.setHeaderText(null);
+            alert.setContentText("Forma nije validna!");
+            alert.show();
+        }
+    }
+
 
 }

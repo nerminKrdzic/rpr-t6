@@ -5,6 +5,7 @@
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -17,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Rectangle?>
 
-<GridPane alignment="CENTER" prefHeight="496.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
+<GridPane alignment="CENTER" prefHeight="511.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
     <stylesheets>
         <URL value="@definitions.css" />
     </stylesheets>
@@ -169,9 +170,35 @@
                  <Label text="Odsjek:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                  <Label text="Godina studija:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                  <Label text="Ciklus studija:" GridPane.rowIndex="3" />
-               <ChoiceBox fx:id="odsjekChoiceBox" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <ChoiceBox fx:id="godinaStudijaChoiceBox" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <ChoiceBox fx:id="CiklusStudijaChoiceBox" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                 <ChoiceBox fx:id="odsjekChoiceBox" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <items>
+                         <FXCollections fx:factory="observableArrayList">
+                             <String fx:value="AE" />
+                             <String fx:value="EE" />
+                             <String fx:value="RI" />
+                             <String fx:value="TK" />
+                         </FXCollections>
+                     </items>
+                 </ChoiceBox>
+               <ChoiceBox fx:id="godinaStudijaChoiceBox" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Prva" />
+                           <String fx:value="Druga" />
+                           <String fx:value="Treca" />
+                       </FXCollections>
+                   </items>
+               </ChoiceBox>
+               <ChoiceBox fx:id="ciklusStudijaChoiceBox" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Bachelor" />
+                           <String fx:value="Master" />
+                           <String fx:value="Doktorski studij" />
+                           <String fx:value="Strucni Studij" />
+                       </FXCollections>
+                   </items>
+               </ChoiceBox>
                  
                  <RadioButton fx:id="redovanRadioButton" text="Redovan" GridPane.columnIndex="0" GridPane.rowIndex="4">
                   <toggleGroup>
@@ -192,16 +219,18 @@
       <GridPane.margin>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </GridPane.margin></Group>
-    <Label fx:id="messageLabel" text="" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
+    <Label fx:id="messageLabel" text="" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+    <Button fx:id="potvrdiButton" alignment="CENTER" prefWidth="100" text="Potvrdi" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" onAction="#potvrdiButtonClicked"/>
    <columnConstraints>
-      <ColumnConstraints hgrow="ALWAYS" maxWidth="288.0" minWidth="213.0" prefWidth="286.0" />
-      <ColumnConstraints hgrow="ALWAYS" maxWidth="330.0" minWidth="224.0" prefWidth="314.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="288.0" minWidth="213.0" prefWidth="286.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="330.0" minWidth="224.0" prefWidth="314.0" />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints maxHeight="155.0" minHeight="148.0" prefHeight="153.0" vgrow="ALWAYS" />
       <RowConstraints maxHeight="135.0" minHeight="97.0" prefHeight="135.0" vgrow="ALWAYS" />
       <RowConstraints maxHeight="218.0" minHeight="186.0" prefHeight="186.0" vgrow="ALWAYS" />
-       <RowConstraints prefHeight="20" vgrow="SOMETIMES"/>
+       <RowConstraints prefHeight="20" vgrow="SOMETIMES" />
+       <RowConstraints prefHeight="40" vgrow="SOMETIMES" />
    </rowConstraints>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
