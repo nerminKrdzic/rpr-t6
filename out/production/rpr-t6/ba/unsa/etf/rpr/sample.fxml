@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Rectangle?>
 
-<GridPane alignment="CENTER" prefHeight="511.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
+<GridPane fx:id="gridPane" alignment="CENTER" prefHeight="511.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
     <stylesheets>
         <URL value="@definitions.css" />
     </stylesheets>

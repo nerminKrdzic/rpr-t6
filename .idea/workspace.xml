@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Napravljena MainTest klasa :P" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Napravljena MainTest klasa :P">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/ba/unsa/etf/rpr/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/ba/unsa/etf/rpr/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr-t6/ba/unsa/etf/rpr/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-t6/ba/unsa/etf/rpr/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rpr-t6/ba/unsa/etf/rpr/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-t6/ba/unsa/etf/rpr/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/definitions.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/definitions.css" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -74,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="68">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,10 +92,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/ba/unsa/etf/rpr/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+            <state relative-caret-position="991">
+              <caret line="111" column="101" selection-start-line="111" selection-start-column="101" selection-end-line="111" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#osnovniPodaciTest#0;class#MainTest#0" />
+                <element signature="method#detaljniLicniPodaci#0;class#MainTest#0" />
               </folding>
             </state>
           </provider>
@@ -98,36 +106,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2193">
-              <caret line="403" column="38" selection-start-line="403" selection-start-column="38" selection-end-line="403" selection-end-column="38" />
+            <state relative-caret-position="230">
+              <caret line="32" column="42" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1901#2343#0" />
-                <element signature="method#validirajMail#0;class#Controller#0" />
-                <element signature="method#validanindex#0;class#Controller#0" />
-                <element signature="method#validirajJMBG#0;class#Controller#0" />
-                <element signature="e#4506#4947#0" />
-                <element signature="e#4414#4526#0" />
-                <element signature="e#5299#5677#0" />
-                <element signature="e#6360#6773#0" />
-                <element signature="class#2822:3406" />
-                <element signature="class#7900:8107" />
-                <element signature="class#3466:4050" />
-                <element signature="class#9087:9294" />
-                <element signature="class#4130:4730" />
-                <element signature="class#10253:10671" />
-                <element signature="class#4805:5415" />
-                <element signature="class#11409:11827" />
-                <element signature="class#5086:5289" />
-                <element signature="class#12184:12602" />
-                <element signature="class#12690:13225" />
-                <element signature="class#13295:13713" />
-                <element signature="class#9454:9686" />
-                <element signature="class#10471:10674" />
-                <element signature="class#10809:11012" />
-                <element signature="class#15174:15604" />
-                <element signature="e#16229#16751#0" />
-                <element signature="e#12141#12682#0" />
+                <element signature="e#3150#3474#0" />
+                <element signature="e#3780#5467#0" />
               </folding>
             </state>
           </provider>
@@ -135,19 +119,19 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/sample.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="340">
               <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/definitions.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="289">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -174,10 +158,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/Controller.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Main.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/definitions.css" />
         <option value="$PROJECT_DIR$/Test/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Controller.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/definitions.css" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Controller.java" />
         <option value="$PROJECT_DIR$/Test/ba/unsa/etf/rpr/MainTest.java" />
       </list>
     </option>
@@ -198,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +194,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,7 +212,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/kuroi/Desktop/faks kolizija/RPR/rpr-t6/src/ba/unsa/etf/rpr/Main.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543724734148" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543852146842" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -257,7 +241,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -310,6 +294,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr-t6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.MainTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.detaljniLicniPodaci" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr-t6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.MainTest" />
+      <option name="METHOD_NAME" value="detaljniLicniPodaci(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.osnovniPodaciTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr-t6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.MainTest" />
+      <option name="METHOD_NAME" value="osnovniPodaciTest(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -339,6 +381,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.MainTest.detaljniLicniPodaci" />
+        <item itemvalue="JUnit.MainTest.osnovniPodaciTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -352,6 +401,8 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1543685798488" duration="35136000" />
+      <workItem from="1543762901357" duration="894000" />
+      <workItem from="1543846042725" duration="5824000" />
     </task>
     <task id="LOCAL-00001" summary="Kreirao fxml zadatka tj. UI">
       <created>1543695489935</created>
@@ -412,25 +463,56 @@
     <option name="localTasksCounter" value="9" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 00m 27s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 02m 02s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 03m 26s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 12m 25s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 12m 40s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 21m 03s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 22m 47s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_osnovniPodaciTest - 2018.12.03 at 16h 23m 57s.xml">
+      <configuration name="MainTest.osnovniPodaciTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_detaljniLicniPodaci - 2018.12.03 at 16h 34m 31s.xml">
+      <configuration name="MainTest.detaljniLicniPodaci" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_detaljniLicniPodaci - 2018.12.03 at 16h 35m 13s.xml">
+      <configuration name="MainTest.detaljniLicniPodaci" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36438000" />
+    <option name="totallyTimeSpent" value="43156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20877458" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21482602" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.029459901" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32242227" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3371522" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41734862" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -440,8 +522,10 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="16" />
       <window_info anchor="right" id="Maven" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -472,7 +556,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="Napravljena MainTest klasa :P" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/ba/unsa/etf/rpr/MainTest.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="textField.getStyleClass().toString()" language="JAVA" />
+        <watch expression="textField.getStyleClass().toString()" language="JAVA" />
+      </configuration>
       <configuration name="Application">
         <watch expression="newValue.toString()" language="JAVA" />
         <watch expression="this.datum" language="JAVA" />
@@ -487,6 +585,31 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>textField.getStyleClass().toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>textField.getStyleClass().getClass().toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>textField.getStyleClass().getClass().toString(</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>textField.getStyle()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>textField.getStyleClass().get(0)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>mjesto</expression-string>
         <language-id>JAVA</language-id>
@@ -504,16 +627,6 @@
       </expression>
       <expression>
         <expression-string>datum.substring(0,2).equals(DD) &amp;&amp; datum.substring(2,4).equals(MM) &amp;&amp; datum.substring(5, 8).equals(GGG)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>this.datum</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>newValue.toString()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -540,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/definitions.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.controls/javafx/scene/control/TextInputControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -557,9 +663,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/definitions.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="68">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -567,56 +680,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="403" column="38" selection-start-line="403" selection-start-column="38" selection-end-line="403" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1901#2343#0" />
-            <element signature="method#validirajMail#0;class#Controller#0" />
-            <element signature="method#validanindex#0;class#Controller#0" />
-            <element signature="method#validirajJMBG#0;class#Controller#0" />
-            <element signature="e#4506#4947#0" />
-            <element signature="e#4414#4526#0" />
-            <element signature="e#5299#5677#0" />
-            <element signature="e#6360#6773#0" />
-            <element signature="class#2822:3406" />
-            <element signature="class#7900:8107" />
-            <element signature="class#3466:4050" />
-            <element signature="class#9087:9294" />
-            <element signature="class#4130:4730" />
-            <element signature="class#10253:10671" />
-            <element signature="class#4805:5415" />
-            <element signature="class#11409:11827" />
-            <element signature="class#5086:5289" />
-            <element signature="class#12184:12602" />
-            <element signature="class#12690:13225" />
-            <element signature="class#13295:13713" />
-            <element signature="class#9454:9686" />
-            <element signature="class#10471:10674" />
-            <element signature="class#10809:11012" />
-            <element signature="class#15174:15604" />
-            <element signature="e#16229#16751#0" />
-            <element signature="e#12141#12682#0" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/sample.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="230">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3150#3474#0" />
+            <element signature="e#3780#5467#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/ba/unsa/etf/rpr/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state relative-caret-position="991">
+          <caret line="111" column="101" selection-start-line="111" selection-start-column="101" selection-end-line="111" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#osnovniPodaciTest#0;class#MainTest#0" />
+            <element signature="method#detaljniLicniPodaci#0;class#MainTest#0" />
           </folding>
         </state>
       </provider>
